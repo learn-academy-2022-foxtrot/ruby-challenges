@@ -48,43 +48,81 @@
 
 # Challenge: Rock, Paper, Scissors
 # As the first user, I can see a prompt in the terminal to enter my name.
-puts 'player one enter your name'
-player_one_name = gets.chomp
+# puts 'player one enter your name'
+# player_one_name = gets.chomp
 
 
-# As the second user, I can see a prompt in the terminal to enter my name.
-puts 'player two enter your name'
-player_two_name = gets.chomp
+# # As the second user, I can see a prompt in the terminal to enter my name.
+# puts 'player two enter your name'
+# player_two_name = gets.chomp
 
-# As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
-puts "#{player_one_name} enter (1)paper, (2)rock or (3)scissors"
-player_one_selection = gets.chomp
+# # As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+# puts "#{player_one_name} enter (1)paper, (2)rock or (3)scissors"
+# player_one_selection = gets.chomp
 
 
 # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
-puts "#{player_two_name} enter (1)paper, (2)rock or (3)scissors"
-player_two_selection = gets.chomp
+# puts "#{player_two_name} enter (1)paper, (2)rock or (3)scissors"
+# player_two_selection = gets.chomp
 
-# As a user, I can see a message in the terminal depicting which user won the round.
-# As a user, I can see a message in the terminal noting if there was a tie.
-def calculate_winner(p1_choice, p2_choice)
-    if  (p1_choice == '1' && p2_choice == '2') ||
-        (p1_choice == '2' && p2_choice == '3') ||
-        (p1_choice == '3' && p2_choice == '1') 
-    puts 'player one wins'
+# # As a user, I can see a message in the terminal depicting which user won the round.
+# # As a user, I can see a message in the terminal noting if there was a tie.
+# def calculate_winner(p1_choice, p2_choice)
+#     if  (p1_choice == '1' && p2_choice == '2') ||
+#         (p1_choice == '2' && p2_choice == '3') ||
+#         (p1_choice == '3' && p2_choice == '1') 
+#     puts 'player one wins'
+#     elsif 
+#         (p1_choice == '1' && p2_choice == '3') ||
+#         (p1_choice == '2' && p2_choice == '1') ||
+#         (p1_choice == '3' && p2_choice == '2')
+#     puts 'player two wins'
+#     else 
+#         puts 'it is a tie' 
+#     end
+# end
+
+# calculate_winner(player_one_selection, player_two_selection)
+
+# As a developer, you have been tasked with creating the user registration for a secure web site. To test your code, enter the user ID and password in the terminal to find out if they are acceptable. The user ID and password must adhere to the to following criteria:
+# User ID and password cannot be the same.
+# User ID and password must be at least six characters long.
+# Password must contain at least one of: !#$
+# User ID cannot contain the following characters: !#$ or spaces
+# Password cannot be the word "password".
+# User password must contain at least one number.
+def check_password(user_id, password)
+    if user_id == password
+        p 'User ID and Password cannot be the same!'
     elsif 
-        (p1_choice == '1' && p2_choice == '3') ||
-        (p1_choice == '2' && p2_choice == '1') ||
-        (p1_choice == '3' && p2_choice == '2')
-    puts 'player two wins'
-    else 
-        puts 'it is a tie' 
+      user_id.length < 6 ||
+      password.length < 6
+        p 'User ID and Password must be at least six characters!'
+    elsif 
+      password.count('0-9') < 1
+        puts 'Your password must contain at least one number.'
+    elsif 
+      !(password.include?('!') ||
+        password.include?('#') ||
+        password.include?('$')
+      )
+        p 'Password must contain at least one !, #, or $ in it!'
+    elsif 
+      user_id.include?('!') ||
+      user_id.include?('#') ||
+      user_id.include?('$') ||
+      user_id.include?(' ')
+        p 'User ID cannot have !, #, or $ in it!'
+    elsif 
+      password.include?('password')
+        p "Password cannot contain 'password'!"
+    else
+      p "User ID #{user_id} and password #{password} are valid."
     end
-end
-
-calculate_winner(player_one_selection, player_two_selection)
-
-
-
-
-
+  end
+  
+  puts 'Please enter a user name: ==>'
+  input_id = gets.chomp
+  puts 'Please enter a password: ==>'
+  input_pass = gets.chomp
+  check_password(input_id, input_pass)
