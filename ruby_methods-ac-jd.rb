@@ -48,11 +48,42 @@
 
 # Challenge: Rock, Paper, Scissors
 # As the first user, I can see a prompt in the terminal to enter my name.
+puts 'player one enter your name'
+player_one_name = gets.chomp
+
+
 # As the second user, I can see a prompt in the terminal to enter my name.
+puts 'player two enter your name'
+player_two_name = gets.chomp
+
 # As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+puts "#{player_one_name} enter (1)paper, (2)rock or (3)scissors"
+player_one_selection = gets.chomp
+
+
 # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+puts "#{player_two_name} enter (1)paper, (2)rock or (3)scissors"
+player_two_selection = gets.chomp
+
 # As a user, I can see a message in the terminal depicting which user won the round.
 # As a user, I can see a message in the terminal noting if there was a tie.
+def calculate_winner(p1_choice, p2_choice)
+    if  (p1_choice == '1' && p2_choice == '2') ||
+        (p1_choice == '2' && p2_choice == '3') ||
+        (p1_choice == '3' && p2_choice == '1') 
+    puts 'player one wins'
+    elsif 
+        (p1_choice == '1' && p2_choice == '3') ||
+        (p1_choice == '2' && p2_choice == '1') ||
+        (p1_choice == '3' && p2_choice == '2')
+    puts 'player two wins'
+    else 
+        puts 'it is a tie' 
+    end
+end
+
+calculate_winner(player_one_selection, player_two_selection)
+
 
 
 
