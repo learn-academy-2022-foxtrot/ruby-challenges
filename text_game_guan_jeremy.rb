@@ -71,7 +71,7 @@ elsif(choice == 2 && player_skill == 'Strength')
     puts 'You gathered all your might, found a strong branch and fought off the bear'
     puts ''
 elsif(choice == 2)
-    puts 'Bad choice, the bear is to strong, you lose 15 hp'
+    puts 'Bad choice, the bear is too strong, you lose 15 hp'
     puts ''
     health -= 15
     puts "#{player_name}'s health is now at #{health}"
@@ -334,3 +334,4 @@ while !selected do
     end
 end
 
+p 'You have a home now, live it up, THE END'
