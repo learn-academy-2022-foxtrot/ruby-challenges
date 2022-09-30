@@ -37,7 +37,7 @@ my_phone.delete(:facebook)
 
 # As a developer, I can use an enumerable method to return information about all of my_phone's applications.
 
-def my_phone_apps hash
+# def my_phone_apps hash
 
 hash.map do |key, value|
   "#{key} is a #{value}"
@@ -46,11 +46,21 @@ end
 p my_phone_apps(my_phone)
 
 # 🏔 Stretch Goals
+
 # As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
+# .capitalize method 
+# .map 
+
+def my_phone_apps hash
+
+  hash.map do |key, value|
+    "#{key.capitalize} is a #{value}"
+    end
+  end
+  p my_phone_apps(my_phone)
+
 # As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each app.
 
-
-
-# , :facebook, :prizepicks, :tiktok, :twitter
-
-# , 'socialist media', 'gambling app', 'gen z media (chinese info getter)', 'more social media'
+my_phone.each do |key, value|
+  p "#{key} is a #{value}"
+end
