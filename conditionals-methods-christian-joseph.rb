@@ -85,37 +85,37 @@ p palidrome('boob')
 # # "rock"
 
 # # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
-# puts "#{name2}, rock, paper, or scissors?"
-# move2 = gets.chomp
-# p move2
-# joe, rock, paper, or scissors?
-# paper
-# "paper"
+puts "#{name2}, rock, paper, or scissors?"
+move2 = gets.chomp
+p move2
+joe, rock, paper, or scissors?
+paper
+"paper"
 
 # As a user, I can see a message in the terminal depicting which user won the round.
 
-# winning condition for player 1 for paper > rock
-# if move1 == 'paper' && move2 == 'rock'
-#     p"#{name1} wins"
-# # winning condtion for player 2 for scissors > paper
-# elsif move1 == 'paper' && move2 == 'scissors'
-#     p"#{name2} wins"
-#     # winning condtion for player 1 for rock > scissors
-# elsif move1 == 'rock' && move2 == 'scissors'
-#     p"#{name1} wins"
-#     #winning condition for player 2 for paper > rock
-# elsif move1 == 'rock' && move2 == 'paper'
-#     p"#{name2} wins"
-#     #winning condition for player 1 scissors > paper
-# elsif move1 == 'scissors' && move2 == 'paper'
-#     p"#{name1} wins"
-#     #winning condition for player 2 for rock > scissors
-# elsif move1 == 'scissors' && move2 == 'rock'
-#     p"#{name2} wins"
-#     #condition for draw
-# else
-#    p 'tie'
-# end
+winning condition for player 1 for paper > rock
+if move1 == 'paper' && move2 == 'rock'
+    p"#{name1} wins"
+# winning condtion for player 2 for scissors > paper
+elsif move1 == 'paper' && move2 == 'scissors'
+    p"#{name2} wins"
+    # winning condtion for player 1 for rock > scissors
+elsif move1 == 'rock' && move2 == 'scissors'
+    p"#{name1} wins"
+    #winning condition for player 2 for paper > rock
+elsif move1 == 'rock' && move2 == 'paper'
+    p"#{name2} wins"
+    #winning condition for player 1 scissors > paper
+elsif move1 == 'scissors' && move2 == 'paper'
+    p"#{name1} wins"
+    #winning condition for player 2 for rock > scissors
+elsif move1 == 'scissors' && move2 == 'rock'
+    p"#{name2} wins"
+    #condition for draw
+else
+   p 'tie'
+end
 
 
 # chris, rock, paper, or scissors?
