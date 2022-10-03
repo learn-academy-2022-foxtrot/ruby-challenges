@@ -67,7 +67,10 @@ p dishes.get_status
 # For the following ColorPalette challenge use initialize and attr_accessor methods in your class.
 
 # As a developer, I can create a class called ColorPalette.
+class ColorPalette 
+end
 # As a developer, I can create three instances (objects) of class ColorPalette.
+green = ColorPalette.new
 # e.g green = ColorPalette.new
 # As a developer, I can initialize each instance of the class ColorPalette with three colors.
 # e.g. green = ColorPalette.new('Chartreuse', 'Kelly', 'Seafoam')
