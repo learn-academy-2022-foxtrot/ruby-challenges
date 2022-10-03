@@ -38,7 +38,7 @@ class Fish < Animal
     end
 
     def fish_info
-        "This #{@type_fish} is #{@blood_type} and #{@animal_age} years old is #{status_alive ? "alive":"dead"}"
+        "This #{@type_fish} is #{@blood_type} and #{@animal_age} years old is #{@status_alive ? "alive":"dead"}"
     end
 
     def salmon_life
@@ -83,13 +83,87 @@ p salmon.salmon_life
 
 class Mammal < Animal
     
+    attr_accessor  :blood_type, :type_mammal
+    def initialize(type_mammal)
+        super()
+        @blood_type = "Warm Blooded"
+        @type_mammal = type_mammal
+         
+
+    end
+    def mammal_info
+        "This #{@type_mammal} is #{@blood_type} and #{@animal_age} years old is #{@status_alive ? "alive":"dead"}"
+    end
+
+    def bear_life
+        if(animal_age >= 20)
+            @status_alive = false
+            "This bear is #{animal_age}, he/her life has ended"
+        else
+            "This bear is #{animal_age}, he/she is still ticking"
+        end
+    end
+  
+
 end
+# As a developer
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
 # As a developer, I can create a Bear that inherits from Mammal.
+bear = Mammal.new("Polar Bear")
+p bear
+
 # As a developer, I can age my Bear up.
+p bear.annual_birthday
+p bear.annual_birthday
+p bear
+
 # As a developer, I can see a message that tells me all of my Bear's information.
+p bear.mammal_info
+
 # As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
 # Hint: You will need a method that changes the status of alive in the initialize method of Animal.
+my_num = 17
+my_num.times do 
+    bear.annual_birthday
+end
+
+p bear.mammal_info
+p bear.annual_birthday
+p bear.bear_life
+p bear.mammal_info
+
 # As a developer, I can create a Mammal of my choice.
+
+
 # As a developer, I can interact with the new Mammal via various methods.
 # As a developer, I can see a message that tells me all of my new Mammal's information.
+
+
+class Mammal < Animal
+    
+    attr_accessor  :blood_type, :type_mammal
+    def initialize(type_mammal)
+        super()
+        @blood_type = "Warm Blooded"
+        @type_mammal = type_mammal
+         
+
+    end
+    def mammal_info
+        "This #{@type_mammal} is #{@blood_type} and #{@animal_age} years old is #{@status_alive ? "alive":"dead"}"
+    end
+
+    def dolphin_life
+        if(animal_age >= 45)
+            @status_alive = false
+            "This dolphin is #{animal_age}, he/her life has ended"
+        else
+            "This dolphin is #{animal_age}, he/she is still ticking"
+        end
+    end
+  
+end
+dolphin = Mammal.new("Orca")
+p dolphin 
+
+
