@@ -1,5 +1,7 @@
-# As a developer, I can create a class called Task.
+# ----------- Task Challenge ----------- #
 
+# As a developer, I can create a class called Task.
+# As a developer, I can see the title of each instance of class Task.
 
 class Task
     def initialize(title)
@@ -18,21 +20,21 @@ end
 
 # As a developer, I can create three instances (objects) of class Task. e.g laundry = Task.new
 # As a developer, I can initialize each instance of class Task with a title.
-# As a developer, I can see the title of each instance of class Task.
-# As a developer, I can initialize each instance of class Task with a status that has a default value of 'incomplete'.
-# As a developer, I can update the status of each instance of class Task when the task has been completed.
 
 grocery_shopping = Task.new("Grocery trip")
 folding_laundry = Task.new("Laundry Day")
 cooking_food = Task.new("Making Dinner")
 go_fishing = Task.new("Fishing Trip")
 
+# As a developer, I can initialize each instance of class Task with a status that has a default value of 'incomplete'.
+# As a developer, I can update the status of each instance of class Task when the task has been completed.
+
 p grocery_shopping.get_status
 grocery_shopping.set_status("complete")
 p grocery_shopping.get_status
 
 
-# ColorPalette challenge
+# ----------- ColorPalette challenge ----------- #
 
 # As a developer, I can create a class called ColorPalette.
 
@@ -51,7 +53,6 @@ end
 # As a developer, I can create three instances (objects) of class ColorPalette.
 # As a developer, I can initialize each instance of the class ColorPalette with three colors.
 
-
 green = ColorPalette.new('Chartreuse', 'Kelly', 'Seafoam')
 blue = ColorPalette.new('Indigo', 'Navy', 'Denim')
 red = ColorPalette.new('Maroon', 'Scarlet', 'Ruby')
@@ -65,7 +66,6 @@ green.all_colors
 # As a developer, I can change one or more colors of a given palette.
 
 green.color1 = "dark green"
-
 p green.color1
 
 
