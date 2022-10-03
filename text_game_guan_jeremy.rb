@@ -243,7 +243,7 @@ while !selected do
     end
 end
 if(choice == 1 && player_skill == 'Charisma')
-    puts 'You have out smarted the Troll in a game of wit and the decided to let you pass'
+    puts 'You have out smarted the Troll in a game of wit and he decided to let you pass'
     puts ''
 elsif(choice == 1)
     puts 'The Giant Troll requires a toll, you must pay Ɖ14'
@@ -263,7 +263,7 @@ elsif(choice == 2  && player_skill == 'Strength')
     puts "#{player_name}'s health is now at #{health}"
     puts ''
 elsif(choice == 2)
-    puts 'You and the troll fought, you lost 24 hp, the troll felt bad and left alone'
+    puts 'You and the troll fought, you lost 24 hp, the troll felt bad and left you alone'
     puts ''
     health -= 24
     puts "#{player_name}'s health is now at #{health}"
@@ -314,7 +314,7 @@ while !selected do
         selected = true
     end
     if(choice == 1 && money > 20)
-        puts 'The builder took your doge and started building your cabin. One week me magically finshed and you moved in.'
+        puts 'The builder took your doge and started building your cabin. One week he magically finshed and you moved in.'
         money -= 20
         puts ''
         puts "You have #{money} doge left"
