@@ -42,18 +42,13 @@ p fish
 
 #output: #<Animal_1:0x0000000131855688 @title="Fish", @age=0, @health=true, @bloodtype="Cold Blooded">
 # As a developer, I can create a Fish that inherits from Animal.
-
 # As a developer, I can initialize all of my fish to be cold_blooded. (Yes, there is one fish who is technically fully warm-blooded but we aren't going to talk about that.)
-
 # As a developer, I can create a Salmon that inherits from Fish.
-
 # As a developer, I can initialize my Salmon to be a specific species (Atlantic, Sockeye, etc).
-
 # As a developer, I can see that my Salmon is cold-blooded.
 # As a developer, I can age my Salmon up.
 # As a developer, I can see a message that tells me all of my Salmon's information.
 # As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
-
 # Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 # As a developer, I can create a Mammal that inherits from Animal.
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
