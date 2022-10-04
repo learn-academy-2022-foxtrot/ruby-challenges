@@ -18,6 +18,7 @@
 # As a developer with a TaskList, I can list all the incomplete items in order of due date.
 # As a developer with a TaskList with and without due dates, I can list all the not completed items in order of due date, and then the items without due dates.
 
+require 'date'
 
 class Task
 
@@ -29,4 +30,23 @@ class Task
     @status = status
     @date = date
   end
+  
 end
+
+
+
+class TaskList 
+
+  attr_accessor :title, :status
+  def initialize()
+    @task_list = Task.new
+  end
+
+end
+
+p   my_task = Task.new
+p my_task.date = Date.new(2001,2,3)
+
+p new_task = Task.new('Work Out')
+
+p new_task_list = TaskList.new

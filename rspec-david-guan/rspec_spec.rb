@@ -30,5 +30,14 @@ describe 'Task' do
     my_task.date = Date.new(2001,2,3)
     expect my_task.date
   end
+
+  it 'Creates a TaskList' do
+    
+    new_task_list = TaskList.new
+    
+
+  end
+
 end
+
 
