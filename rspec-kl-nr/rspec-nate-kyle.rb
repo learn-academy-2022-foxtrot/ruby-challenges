@@ -8,10 +8,3 @@ class Task
     end
 
 end
-
-class Date < Task
-    def initialize()
-        super()
-    end
-    Date.new(2022,10,5)
-end

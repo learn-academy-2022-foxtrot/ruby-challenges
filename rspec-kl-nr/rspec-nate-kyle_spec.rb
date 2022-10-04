@@ -35,9 +35,8 @@ describe 'Task' do
 
     it 'shows a due-date' do
         my_task = Task.new
-        expect(Date.new(2022,10,5)
-        ).to be_a Integer
-        expect(Date).to eq "2022-10-5"
+        my_task.date = (Date.new(2022,10,5))
+        expect my_task.date
 
     end
 end
